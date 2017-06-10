@@ -27,7 +27,7 @@
 <!-- markdown -->
 <!-- TOC -->
 
-- [Git安装、命令大全等](#git安装命令大全等)
+- [Github安装、命令大全等](#github安装命令大全等)
     - [git安装](#git安装)
     - [GitHub常用命令](#github常用命令)
         - [查看、添加、提交、删除、找回，重置修改文件](#查看添加提交删除找回重置修改文件)
@@ -50,9 +50,10 @@
         - [5、push到github上](#5push到github上)
 
 <!-- /TOC -->
+# Github安装、命令大全等
 
-# Git安装、命令大全等
 ## git安装
+
 在你开始使用 Git 前，需要将它安装在你的计算机上。 即便已经安装，最好将它升级到最新的版本。
 
 git下载官网：[链接](https://www.git-scm.com/downloads)
@@ -73,7 +74,9 @@ sudo apt-get install git
 ```
 -----
 ## GitHub常用命令
+
 ### 查看、添加、提交、删除、找回，重置修改文件
+
 ```sh
 git help <command>  # 显示command的help
 git show            # 显示某次提交的内容 git show $id
@@ -98,7 +101,9 @@ git ci --amend      # 修改最后一次提交记录
 git revert <$id>    
 git revert HEAD     # 恢复最后一次提交的状态
 ```
+
 ### 查看文件diff
+
 ```sh
 git diff <file>             # 比较当前文件和暂存区文件差异 git diff
 git diff <id1><id1><id2>    # 比较两次提交之间的差异
@@ -107,7 +112,9 @@ git diff --staged           # 比较暂存区和版本库差异
 git diff --cached           # 比较暂存区和版本库差异
 git diff --stat             # 仅仅比较统计信息
 ```
+
 ### 查看提交记录
+
 ```sh
 git log git log <file>      # 查看该文件每次提交记录
 git log -p <file>           # 查看每次详细修改内容的diff
@@ -121,6 +128,7 @@ Mac上可以使用tig代替diff和log，brew install tig
 ## Git 本地分支管理
 
 ### 查看、切换、创建和删除分支
+
 ```sh
 git br -r               # 查看远程分支
 git br <new_branch>     # 创建新的分支
@@ -145,7 +153,9 @@ git br -d <branch>
 # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)
 git br -D <branch> 
 ```
+
 ### 分支合并和rebase
+
 ```sh
 # 将branch分支合并到当前分支
 git merge <branch> 
@@ -156,20 +166,26 @@ git merge origin/master --no-ff
 # 将master rebase到branch，相当于： git co <branch> && git rebase master && git co master && git merge <branch>
 git rebase master <branch>
 ```
+
 ### Git补丁管理(方便在多台机器上开发同步时用)
+
 ```sh
 git diff > ../sync.patch        # 生成补丁
 git apply ../sync.patch         # 打补丁
 git apply --check ../sync.patch # 测试补丁能否成功
 ```
+
 ### Git暂存管理
+
 ```sh
 git stash           # 暂存
 git stash list      # 列所有stash
 git stash apply     # 恢复暂存的内容
 git stash drop      # 删除暂存区
 ```
+
 ## Git远程分支管理
+
 ```sh
  # 抓取远程仓库所有分支更新并合并到本地
 git pull           
@@ -207,7 +223,9 @@ git push origin <local_branch>:<remote_branch>
 #先删除本地分支(git br -d <branch>)，然后再push删除远程分支
 git push origin :<remote_branch> 
 ```
+
 ### Git远程仓库管理
+
 ```sh
 # 查看远程服务器地址和仓库名称
 git remote -v 
@@ -220,10 +238,10 @@ git remote add origin git@ github:robbin/robbin_site.git
 
 # 设置远程仓库地址(用于修改远程仓库地址) git remote rm <repository> # 删除远程仓库
 git remote set-url origin git@github.com:robbin/robbin_site.git
-
-
 ```
+
 ### 创建远程仓库
+
 ```sh
 # 用带版本的项目创建纯版本仓库
 git clone --bare robbin_site robbin_site.git 
@@ -258,7 +276,9 @@ git branch --set-upstream develop origin/develop
 作者原项目地址是：    https://github.com/ma6174/vim.git
 我frok后的项目地址是：https://github.com/tjy-cool/vim.git
 ```
+
 ### 1、clone 自己账号里fork的分支
+
 ```sh
 git clone https://github.com/tjy-cool/vim.git
 ```
@@ -269,22 +289,27 @@ git remote -v
 ```
 
 ### 2、增加源分支到项目远程分支列表
+
 进入刚才clone的文件目录下，然后增加源分支地址到你项目远程分支列表中
 ```sh
 cd vim
 git remote add vim https://github.com/ma6174/vim.git
 ```
+
 ### 3、fetch源分支到本地
+
 ```sh
 git fetch
 ```
 
 ### 4、合并两个版本的代码
+
 ```sh
 git merge vim/master
 ```
 
 ### 5、push到github上
+
 把合并后的代码push到你的Github项目上去，这步需要你输入你的账户名和密码
 ```sh
 git push origin master
@@ -299,7 +324,7 @@ git push origin master
 <!-- TOC -->
 
 <ul>
-<li><a href="#git安装命令大全等">Git安装、命令大全等</a>
+<li><a href="#github安装命令大全等">Github安装、命令大全等</a>
 <ul><li><a href="#git安装">git安装</a></li>
 <li><a href="#github常用命令">GitHub常用命令</a>
 <ul><li><a href="#查看添加提交删除找回重置修改文件">查看、添加、提交、删除、找回，重置修改文件</a></li>
@@ -324,7 +349,7 @@ git push origin master
 
 <!-- /TOC -->
 
-<h1 id="git">Git安装、命令大全等</h1>
+<h1 id="github">Github安装、命令大全等</h1>
 
 <h2 id="git">git安装</h2>
 
