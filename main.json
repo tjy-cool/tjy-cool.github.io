@@ -1,1 +1,42 @@
-{"name":"tjy-cool","number_of_posts_per_page":15,"disqus_shortname":"tjy-cool","posts":[{"title":"ubuntu装机配置","date":"2017-06-10","tags":"ubuntu vim git","path":"ubuntu_config.html"},{"title":"ubuntu安装pycharm","date":"2017-06-10","tags":"ubuntu pycharm","path":"ubuntu_pycharm.html","num":1,"type":"post","active":false},{"title":"Python3 装饰器","date":"2017-06-10","tags":"Python3","path":"decorator.html","num":2,"type":"post","active":false}],"pages":[{"title":"Manage","date":"2017-06-10","tags":"","path":"http://tjy-cool.github.io/simple","num":0,"type":"page","active":false}]}
+{
+    "name": "tjy-cool",
+    "number_of_posts_per_page": 15,
+    "disqus_shortname": "tjy-cool",
+    "posts": [
+        {
+            "title": "ubuntu装机配置",
+            "date": "2017-06-10",
+            "tags": "ubuntu vim git",
+            "path": "ubuntu_config.html"
+        },
+        {
+            "title": "ubuntu安装pycharm",
+            "date": "2017-06-10",
+            "tags": "ubuntu pycharm",
+            "path": "ubuntu_pycharm.html",
+            "num": 1,
+            "type": "post",
+            "active": false
+        },
+        {
+            "title": "Python3 装饰器",
+            "date": "2017-06-10",
+            "tags": "Python3",
+            "path": "decorator.html",
+            "num": 2,
+            "type": "post",
+            "active": false
+        }
+    ],
+    "pages": [
+        {
+            "title": "Manage",
+            "date": "2017-06-10",
+            "tags": "",
+            "path": "http://tjy-cool.github.io/simple",
+            "num": 0,
+            "type": "page",
+            "active": false
+        }
+    ]
+}
